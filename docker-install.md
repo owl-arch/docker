@@ -1,0 +1,87 @@
+20/01/2022 Qui 
+Install Docker
+
+Ubuntu
+sudo apt install docker-ce
+
+Windows
+https://hub.docker.com/editions/community/docker-ce-desktop-windows
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+
+
+# I N S T A L A Ç Ã O           
+DOCKER e DOCKER COMPOSE no linux ubuntu 20.04            
+
+<br> <br>
+
+### Passo 1 - remover versões anteriores
+```
+sudo apt-get remove docker docker-engine docker.io containerd ru
+```
+
+### Passo 2 - Atualiza o índice do pacote apt e instala os pacotes para permitir que o apt use um repositório HTTPS:
+
+```
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+```	
+
+### Passo 3 - Adicione a chave GPG oficial do Docke
+
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+- Verifique se agora você tem a chave com a impressão digital 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, pesquisando os últimos 8 caracteres da impressão digital.
+
+```
+sudo apt-key fingerprint 0EBFCD88
+```
+
+### Passo 4 - Use o seguinte comando para configurar o repositório estável. 
+
+```
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+### Passo 5 - Instale o Docker Engine
+
+- Atualize o índice do pacote apt e instale a versão mais recente do Docker Engine e containerd ou vá para a próxima etapa para instalar uma versão específica:
+
+```
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+### Passo 6 - Inicie o serviço e verique o status
+
+```
+service docker status
+service docker start
+```
+
+
+
+# DOCKER COMPOSE INSTALL
+
+### Passo 1
+
+```
+sudo curl -L "https://github.com/docker/compose/rel... -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+### Passo 2 - defina as permissões corretas para que o comando docker-compose para que seja executável:
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+### Passo 3 verifica se a instalação foi bem sucedida
+
+```
+docker-compose --version
+```
