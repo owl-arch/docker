@@ -1,6 +1,6 @@
 <div style="display: inline_block"><br>
   <img align="right" alt="Docker-container" style="width: auto; height:300px;" 
-     src="https://docker-unleashed.readthedocs.io/_images/virt_docker.png">
+     src="https://miro.medium.com/v2/resize:fit:720/0*SWHyvx_VdWQluT31">
 </div>
 
 <div style="display: inline_block"><br>
