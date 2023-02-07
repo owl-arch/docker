@@ -1,17 +1,3 @@
-20/01/2022 Qui 
-Install Docker
-
-Ubuntu
-sudo apt install docker-ce
-
-Windows
-https://hub.docker.com/editions/community/docker-ce-desktop-windows
-
-
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
-
- <br><br>
-
 > # I N S T A L A Ç Ã O           
 > DOCKER e DOCKER COMPOSE no linux ubuntu 22.04            
 
@@ -88,4 +74,17 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ```bash
 docker-compose --version
+```
+
+
+
+
+
+
+<br><br><br>
+
+### Testar
+```bash
+# Ubuntu
+sudo apt install docker-ce
 ```
