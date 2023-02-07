@@ -1,6 +1,6 @@
 <div style="display: inline_block"><br>
-  <img align="right" alt="Docker-container" style="width: auto; height:350px;" 
-     src="https://accesto.com/blog/static/18c31d00e830e4818d2f40bb4b22256c/29007/docker-img-1.png">
+  <img align="right" alt="Docker-container" style="width: auto; height:340px;" 
+     src="https://tel4vn.edu.vn/uploads/2020/10/tong-quan-kien-truc-cua-docker-tel4vn-01.png">
 </div>
 
 <div style="display: inline_block"><br>
