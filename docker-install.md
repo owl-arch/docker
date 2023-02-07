@@ -1,23 +1,22 @@
-> # I N S T A L A Ç Ã O           
-> DOCKER e DOCKER COMPOSE no linux ubuntu 22.04            
+> ### I N S T A L A Ç Ã O DOCKER e DOCKER COMPOSE no linux ubuntu 22.04            
 
 <br>
 
-# Docker Install
+## Docker Install
 
-### Passo 1 - remover versões anteriores
+#### Passo 1 - remover versões anteriores
 ```bash
 sudo apt-get remove docker docker-engine docker.io containerd ru
 ```
 
-### Passo 2 - Atualiza o índice do pacote apt e instala os pacotes para permitir que o apt use um repositório HTTPS:
+#### Passo 2 - Atualiza o índice do pacote apt e instala os pacotes para permitir que o apt use um repositório HTTPS:
 
 ```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 ```	
 
-### Passo 3 - Adicione a chave GPG oficial do Docke
+#### Passo 3 - Adicione a chave GPG oficial do Docke
 
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -29,7 +28,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 ```
 
-### Passo 4 - Use o seguinte comando para configurar o repositório estável. 
+#### Passo 4 - Use o seguinte comando para configurar o repositório estável. 
 
 ```bash
 sudo add-apt-repository \
@@ -38,7 +37,7 @@ sudo add-apt-repository \
    stable"
 ```
 
-### Passo 5 - Instale o Docker Engine
+#### Passo 5 - Instale o Docker Engine
 
 - Atualize o índice do pacote apt e instale a versão mais recente do Docker Engine e containerd ou vá para a próxima etapa para instalar uma versão específica:
 
@@ -47,7 +46,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-### Passo 6 - Inicie o serviço e verique o status
+#### Passo 6 - Inicie o serviço e verique o status
 
 ```bash
 service docker status
@@ -56,21 +55,21 @@ service docker start
 
 
 
-# DOCKER COMPOSE INSTALL
+## DOCKER COMPOSE INSTALL
 
-### Passo 1
+#### Passo 1
 
 ```bash
 sudo curl -L "https://github.com/docker/compose/rel... -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
-### Passo 2 - defina as permissões corretas para que o comando docker-compose para que seja executável
+#### Passo 2 - defina as permissões corretas para que o comando docker-compose para que seja executável
 
 ```bash
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-### Passo 3 verifica se a instalação foi bem sucedida
+#### Passo 3 verifica se a instalação foi bem sucedida
 
 ```bash
 docker-compose --version
@@ -83,7 +82,7 @@ docker-compose --version
 
 <br><br><br>
 
-### Testar
+#### Testar
 ```bash
 # Ubuntu
 sudo apt install docker-ce
