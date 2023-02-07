@@ -1,5 +1,5 @@
 <div style="display: inline_block"><br>
-  <img align="right" alt="Docker-container" style="width: auto; height:340px;" 
+  <img align="right" alt="Docker-container" style="width: auto; height:380px;" 
      src="https://miro.medium.com/v2/resize:fit:720/0*SWHyvx_VdWQluT31">
 </div>
 
