@@ -1,5 +1,5 @@
 <div style="display: inline_block"><br>
-  <img align="right" alt="Docker-container" style="width: auto; height:360px;" 
+  <img align="right" alt="Docker-container" style="width: auto; height:380px;" 
      src="https://tel4vn.edu.vn/uploads/2020/10/tong-quan-kien-truc-cua-docker-tel4vn-01.png">
 </div>
 
