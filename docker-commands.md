@@ -55,59 +55,87 @@ Obs.: É possível ver todos os comandos que o Docker possui, tendo o docker ins
 <br><br>
 
 
-# enter a specific docker conteiner
+#### enter a specific docker conteiner
+```bash
 docker exec -it -u <use> <name_container> bash
 docker exec -it <name_container> bash //without user
+```
 
-
-# up all docker containers
+#### up all docker containers
+```bash
 docker-compose up -d
+```
 
-# stop all docker containers
-
-
+#### stop all docker containers
+```bash
 docker-compose stop
+```
 
-# remove a specific docker container
+#### remove a specific docker container
+```bash
 docker rm <name_container>
+```
 
-# remove all containers
+#### remove all containers
+```bash
 docker rm -f $(docker ps -a -q)
 docker rm -f $(docker ps -qa)
+```
 
-# list all docker containers with id, image (location), command, created, status, ports, names
+#### list all docker containers with id, image (location), command, created, status, ports, names
+```bash
 docker ps -a
+```
 
-# remove orphans images
+#### remove orphans images
+```bash
 docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+```
 
-# remove just of exited containers
+#### remove just of exited containers
+```bash
 docker rm $(docker ps -qa -f status=exited)
+```
 
-# remove all images
+#### remove all images
+```bash
 docker rmi -f $(docker images | awk '{print $3, $8}')
+```
 
-# inspect an image
+#### inspect an image
+```bash
 docker history my/image | awk 'NR>1 {print $1}' | xargs docker inspect --format '{{ ((index .ContainerConfig.Cmd ) 0) }}'
 
 docker stop $(docker ps -q); docker rm $(docker ps -a -q); docker volume rm $(docker volume ls -q); docker rmi $(docker images -q); docker network rm $(docker network ls -q);
 docker command to clear all
+```
 
-# show docker disk usage
+#### show docker disk usage
+```bash
 docker system df
+```
 
-# show docker disk usage - verbose mode
+#### show docker disk usage - verbose mode
+```bash
 docker system df -v
+```
 
-# stop and remove containers, networks..
+#### stop and remove containers, networks..
+```bash
 docker-compose down 
+```bash
 
-# stop and remove containers, networks.. - verbose mode
+#### stop and remove containers, networks.. - verbose mode
+```bash
 docker-compose down -v
+```
 
-# down and remove volumes
+#### down and remove volumes
+```bash
 docker-compose down --volumes 
+```
 
-# down and remove images
+#### down and remove images
+```bash
 docker-compose down --rmi <all|local> 
-
+```

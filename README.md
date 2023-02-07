@@ -1,4 +1,4 @@
 # Docker
 
-[ ] docker-install.md
-[ ] docker-command.md
+- [x] docker-install.md
+- [x] docker-command.md
