@@ -1,6 +1,6 @@
 <div style="display: inline_block"><br>
   <img align="right" alt="Docker-container" style="width: auto; height:350px;" 
-     src="https://miro.medium.com/v2/resize:fit:720/0*SWHyvx_VdWQluT31">
+     src="https://accesto.com/blog/static/18c31d00e830e4818d2f40bb4b22256c/29007/docker-img-1.png">
 </div>
 
 <div style="display: inline_block"><br>
