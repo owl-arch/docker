@@ -46,12 +46,20 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-#### Passo 6 - Inicie o serviço e verique o status
+#### Passo 6 - Configura para subir o serviço na Inicialização e verique o status
 
+```bash
+systemctl enable docker
+systemctl start docker
+service docker status
+```
+
+<!--
 ```bash
 service docker status
 service docker start
 ```
+-->
 
 <br>
 
