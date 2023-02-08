@@ -1,8 +1,4 @@
-> ### I N S T A L A Ç Ã O DOCKER e DOCKER COMPOSE no linux ubuntu 22.04            
-
-<br>
-
-## Docker Install
+## Docker - Instalção no linux ubuntu 22.04
 
 #### Passo 1 - remover versões anteriores
 ```bash
@@ -61,9 +57,18 @@ service docker start
 ```
 -->
 
+#### Passo 7 - Autorizar seu usuário para docker
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+          
+
+
 <br>
 
-## DOCKER COMPOSE INSTALL
+## DOCKER COMPOSE - Instalção no linux ubuntu 22.04
 
 #### Passo 1
 
