@@ -46,7 +46,9 @@ apt-get install -y postgresql-client
 psql -h localhost -U postgres
 ```
 
-
+<br><br>
+Referências
+- https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198
 
 
 
