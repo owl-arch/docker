@@ -1,3 +1,10 @@
+
+
+<div style="display: inline_block"><br>
+  <img align="right" alt="Docker-container" style="width: auto; height:180px;" 
+     src="https://user-images.githubusercontent.com/93828234/218277669-2ebdde8e-ab86-47a8-a3ca-edd14ec4f85c.png">
+</div>
+
 > # É fácil e direto começar a usar o Postgres no docker.
 
 <br>
