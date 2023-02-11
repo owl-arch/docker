@@ -1,3 +1,7 @@
+> # É fácil e direto começar a usar o Postgres no docker.
+
+<br>
+
 ## Instalação PostGres em Docker
 
 #### 1. Baixar a imagem do Postgres Server
