@@ -1,3 +1,10 @@
+<div style="display: inline_block"><br>
+  <img align="right" alt="Docker-container" style="width: auto; height:280px;" 
+     src="https://user-images.githubusercontent.com/93828234/218291000-ff3de5dd-b24e-4b6b-b747-9cbd25ca3435.png">
+</div>
+
+<br>
+
 > # É fácil e direto começar a usar o Mysql no docker.
 
 <br>
@@ -16,8 +23,7 @@ mkdir -p $HOME/docker/volumes/mysql
 
 #### 3. Rodar a imagem Docker do Mysql Server
 
- Rodando o Container
-Nessa etapa iremos executar o container criado e iremos passar algumas variáveis de ambiente, como dito anteriormente. As variáveis serão:
+Ao executar o container criado, iremos passar algumas variáveis de ambiente. As variáveis serão:
 
 - MYSQL_ROOT_PASSWORD: Senha para acessar o banco dentro do container;
 - MYSQL_DATABASE: Banco de dados a ser criado;
@@ -25,12 +31,8 @@ Nessa etapa iremos executar o container criado e iremos passar algumas variávei
 - MYSQL_PASSWORD: Senha do usuário para ter acesso ao banco de dados;
 
 ```
-docker run --rm --name my-docker -e MYSQL_ROOT_PASSWORD=docker -e MYSQL_USER=userDB -e MYSQL_PASSWORD=123456 -d -p 3306:3306 -v $HOME/docker/volumes/mysql:/var/lib/mysqlql/data mysql
+docker run --rm --name my-docker -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=db -e MYSQL_PASSWORD=123456 -e MYSQL_DATABASE=backoffice -d -p 3306:3306 -v $HOME/docker/volumes/mysql:/var/lib/mysqlql/data mysql
 ```
-
-$ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=RootPassword -e MYSQL_DATABASE=Backoffice -e MYSQL_USER=MainUser -e MYSQL_PASSWORD=MainPassword backoffice-db
-
-
 
 - --rm: Remove automaticamente o contêiner e seu sistema de arquivos associado ao sair. Em geral, se estivermos executando muitos contêineres de curto prazo, é uma boa prática passar o sinalizador rm para o comando docker run para limpeza automática e evitar problemas de espaço em disco. Sempre podemos usar a opção v (descrita abaixo) para manter os dados além do ciclo de vida de um contêiner
 
@@ -56,8 +58,10 @@ apt-get install -y mysql-client
 
 #### 6. Testar o acesso ao Mysql Server
 ```
-psql -h localhost -U mysql
+mysql -h 127.0.0.1 -P 3306 -u root -p backoffice
 ```
+
+Nota: mysql -h localhostnão funciona.
 
 <br><br>
 Referências
