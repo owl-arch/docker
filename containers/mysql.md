@@ -31,7 +31,7 @@ Ao executar o container criado, iremos passar algumas variáveis de ambiente. As
 - MYSQL_PASSWORD: Senha do usuário para ter acesso ao banco de dados;
 
 ```
-docker run --rm --name my-docker -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=db -e MYSQL_PASSWORD=123456 -e MYSQL_DATABASE=backoffice -d -p 3306:3306 -v $HOME/docker/volumes/mysql:/var/lib/mysqlql/data mysql
+docker run --rm --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=db -e MYSQL_PASSWORD=123456 -e MYSQL_DATABASE=backoffice -d -p 3306:3306 -v $HOME/docker/volumes/mysql:/var/lib/mysqlql/data mysql:latest
 ```
 
 - --rm: Remove automaticamente o contêiner e seu sistema de arquivos associado ao sair. Em geral, se estivermos executando muitos contêineres de curto prazo, é uma boa prática passar o sinalizador rm para o comando docker run para limpeza automática e evitar problemas de espaço em disco. Sempre podemos usar a opção v (descrita abaixo) para manter os dados além do ciclo de vida de um contêiner
@@ -65,7 +65,7 @@ Nota: mysql -h localhostnão funciona.
 
 <br><br>
 Referências
-- 
+- https://johnfercher.medium.com/mysql-docker-7ff6d50d6cf1
 
 
 
