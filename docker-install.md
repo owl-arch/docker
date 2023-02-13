@@ -70,23 +70,11 @@ sudo usermod -aG docker $USER
 
 ## DOCKER COMPOSE - Instalção no linux ubuntu 22.04
 
-#### Passo 1
-
 ```bash
-sudo curl -L "https://github.com/docker/compose/rel... -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+apt install docker-compose
 ```
 
-#### Passo 2 - defina as permissões corretas para que o comando docker-compose para que seja executável
 
-```bash
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
-#### Passo 3 verifica se a instalação foi bem sucedida
-
-```bash
-docker-compose --version
-```
 
 
 
