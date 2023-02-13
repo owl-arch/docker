@@ -40,7 +40,7 @@ Parametros | Finalidade
 -v | Monte $HOME/docker/volumes/mysql na máquina host para o caminho do volume do lado do contêiner /var/lib/mysqlql/data criado dentro do contêiner. Isso garante que os dados do mysql persistam mesmo após a remoção do contêiner.
 
 ```
-docker run --rm --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=db -e MYSQL_PASSWORD=123456 -e MYSQL_DATABASE=backoffice -d -p 3306:3306 -v $HOME/docker/volumes/mysql:/var/lib/mysqlql/data mysql:latest
+docker run --rm --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=db -e MYSQL_PASSWORD=123456 -e MYSQL_DATABASE=backoffice -d -p 3306:3306 -v $HOME/docker/volumes/mysql:/var/lib/mysql/ mysql:latest
 ```
 
 #### 4. Verificar se levantou o Container Docker com o Mysql Server
