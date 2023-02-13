@@ -22,15 +22,21 @@ mkdir -p $HOME/docker/volumes/postgres
 ```
 
 #### 3. Rodar a imagem Docker do Postgres Server
+
+Ao executar o container criado, iremos passar algumas variáveis de ambiente. As variáveis serão: 
+- POSTGRES_PASSWORD: Senha de superusuário para PostgreSQL;
+- POSTGRES_USER: Nome do superusuário (default para superusuário é postgres);
+- POSTGRES_DB: nome do banco de dados padrão a ser configurado (default é POSTGRES_USER).
+
 ```
-docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
+docker run --rm --name postgres -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres:latest
 ```
 
 - --rm: Remove automaticamente o contêiner e seu sistema de arquivos associado ao sair. Em geral, se estivermos executando muitos contêineres de curto prazo, é uma boa prática passar o sinalizador rm para o comando docker run para limpeza automática e evitar problemas de espaço em disco. Sempre podemos usar a opção v (descrita abaixo) para manter os dados além do ciclo de vida de um contêiner
 
 - --name: Um nome de identificação para o contêiner. Podemos escolher o nome que quisermos. Observe que dois contêineres existentes (mesmo se estiverem parados) não podem ter o mesmo nome. Para reutilizar um nome, você precisa passar o sinalizador rm para o comando docker run ou remover explicitamente o contêiner usando o comando docker rm [nome do contêiner].
 
-- -e: Expõe a variável de ambiente de nome POSTGRES_PASSWORD com janela de encaixe de valor para o contêiner. Esta variável de ambiente define a senha de superusuário para PostgreSQL. Podemos definir POSTGRES_PASSWORD como quisermos. Acabei de escolhê-lo para ser docker para demonstração. Existem variáveis ​​de ambiente adicionais que você pode definir. Isso inclui POSTGRES_USER e POSTGRES_DB. POSTGRES_USER define o nome do superusuário. Se não for fornecido, o padrão do nome do superusuário é postgres. POSTGRES_DB define o nome do banco de dados padrão a ser configurado. Se não for fornecido, o valor padrão é POSTGRES_USER.
+- -e: Expõe a variável de ambiente.
 
 - -d: Inicia o contêiner no modo desanexado ou em outras palavras, em segundo plano.
 
