@@ -10,10 +10,25 @@ services:
             - net-dev  
         # Multiplas Dependências    
         depends_on: 
-            - "database"
+            - "postgres"
+            
+    # Servidor de Banco de dados Postgres
+    postgres:
+        image: postgres:latest
+        container_name: postgress
+        ports:
+            - "3306:3036" 
+        networks:
+            - net-dev  
+        environment:
+            POSTGRES_PASSWORD: root
+            POSTGRES_USER: postgres
+            POSTGRES_DB: database
+        volumes:
+          - /root/docker/volumes/postgres:/var/lib/postgresql/data           
      
-    # Servidor de Banco de dados 
-    database:
+    # Servidor de Banco de dados Mysql
+    mysql:
         image: mysql:latest
         container_name: mysql
         ports:
@@ -22,7 +37,7 @@ services:
             - net-dev  
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: backoffice
+            MYSQL_DATABASE: database
             MYSQL_USER: db
             MYSQL_PASSWORD: 12345
         volumes:
