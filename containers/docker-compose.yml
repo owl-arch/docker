@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+    backend:
+        image: nginx:latest
+        ports:
+            - "80:80"
+    database:
+        image: mysql:latest
+        ports:
+            - "3306:3036"
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: backoffice
+            MYSQL_USER: db
+            MYSQL_PASSWORD: 12345
+        links:
+          - db
+        volumes:
+          - /root/docker/volume/mysql:/var/lib/mysql/
+volumes:
+  db:
+    driver: local
