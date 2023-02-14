@@ -1,22 +1,37 @@
 version: '3.5'
 services:
+    # Servidor de Backend
     backend:
         image: nginx:latest
+        container_name: nginx
         ports:
             - "80:80"
+        networks:
+            - net-dev  
+        # Multiplas Dependências    
+        depends_on: 
+            - "database"
+     
+    # Servidor de Banco de dados 
     database:
         image: mysql:latest
+        container_name: mysql
         ports:
-            - "3306:3036"
+            - "3306:3036" 
+        networks:
+            - net-dev  
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: backoffice
             MYSQL_USER: db
             MYSQL_PASSWORD: 12345
-        links:
-          - db
         volumes:
-          - /root/docker/volume/mysql:/var/lib/mysql/
+          - /root/docker/volumes/mysql:/var/lib/mysql/
+          
+networks:
+    net-dev:
+        driver: bridge          
+          
 volumes:
   db:
     driver: local
