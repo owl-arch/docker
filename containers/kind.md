@@ -1,6 +1,4 @@
 
-## Kind
-
 ### Instalação do KIND no Linux Ubuntu 22.04
 
 ```bash
@@ -36,3 +34,9 @@ Thanks for using kind! 😊
 root@i7ultra:~# kind delete cluster --name zeta
 Deleting cluster "zeta" ...
 ```
+
+
+<br><br>
+Referências:
+- https://kind.sigs.k8s.io/
+- https://www.zup.com.br/blog/kind-cluster-kubernetes
