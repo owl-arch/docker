@@ -15,3 +15,8 @@ kubectl: OK
 # Instale o K8s
 install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
+
+
+<br><br>
+Referêncis:
+- https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux
