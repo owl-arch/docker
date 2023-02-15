@@ -8,9 +8,9 @@ services:
             - "80:80"
 #        networks:
 #            - net-dev  
-        # Multiplas Dependências    
-        depends_on: 
-            - "postgres"
+#        # Multiplas Dependências    
+#        depends_on: 
+#            - "postgres"
             
     # Servidor de Banco de dados Postgres
     postgres:
