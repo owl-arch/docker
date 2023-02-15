@@ -6,8 +6,8 @@ services:
         container_name: nginx
         ports:
             - "80:80"
-        networks:
-            - net-dev  
+#        networks:
+#            - net-dev  
         # Multiplas Dependências    
         depends_on: 
             - "postgres"
@@ -18,8 +18,8 @@ services:
         container_name: postgress
         ports:
             - "3306:3036" 
-        networks:
-            - net-dev  
+#        networks:
+#            - net-dev  
         environment:
             POSTGRES_PASSWORD: root
             POSTGRES_USER: postgres
@@ -43,9 +43,9 @@ services:
         volumes:
           - /root/docker/volumes/mysql:/var/lib/mysql/
           
-networks:
-    net-dev:
-        driver: bridge          
+#networks:
+#    net-dev:
+#        driver: bridge          
           
 volumes:
   db:
