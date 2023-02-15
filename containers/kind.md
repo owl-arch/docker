@@ -64,3 +64,4 @@ Thanks for using kind! 😊
 Referências:
 - https://kind.sigs.k8s.io/
 - https://www.zup.com.br/blog/kind-cluster-kubernetes
+- https://www.youtube.com/watch?v=00wlGss2stY (Rodando Kubernetes local usando Kind) 
