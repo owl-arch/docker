@@ -15,7 +15,7 @@ services:
     # Servidor de Banco de dados Postgres
     postgres:
         image: postgres:latest
-        container_name: postgress
+        container_name: postgres
         ports:
             - "5432:5432" 
 #        networks:
