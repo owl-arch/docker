@@ -8,7 +8,7 @@ sudo mv ./kind /usr/local/bin/kind
 ```
 
 
-### Criando um cluster
+### Criando um Cluster com apenas um node
 
 ```bash
 # kind create cluster --name zeta
@@ -30,7 +30,7 @@ Thanks for using kind! 😊
 ```
 
 
-### Criando um cluster com arquivo YAML
+### Criando um Cluster multi-node com arquivo YAML
 
 ```bash
 # kind create cluster --name zeta --config=kind.yml
@@ -52,7 +52,7 @@ kubectl cluster-info --context kind-zeta
 Thanks for using kind! 😊
 ```
 
-### Apagando um cluster
+### Apagando um Cluster
 
 ```bash
 # kind delete cluster --name zeta
