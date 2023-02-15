@@ -1,7 +1,7 @@
 version: '3.5'
 services:
     # Servidor de Backend
-    backend:
+    nginx:
         image: nginx:latest
         container_name: nginx
         ports:
@@ -17,7 +17,7 @@ services:
         image: postgres:latest
         container_name: postgress
         ports:
-            - "3306:3036" 
+            - "5432:5432" 
 #        networks:
 #            - net-dev  
         environment:
