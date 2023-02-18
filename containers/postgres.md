@@ -58,7 +58,8 @@ psql -h localhost -U postgres
 
 <br><br>
 Referências
-- https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198
+- [Install Container Docker PostgreSQL](https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198)
+- [Compose + PostgreSQL + pg-admin](https://renatogroffe.medium.com/postgresql-pgadmin-4-docker-compose-montando-rapidamente-um-ambiente-para-uso-55a2ab230b89)
 
 
 
