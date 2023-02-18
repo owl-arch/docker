@@ -21,5 +21,5 @@
 
 #### 2. Containers
 - [ ] [NGINX Server](https://github.com/dev-carvalho/docker/tree/main/containers/nginx.md)
-- [x] [Postgres Server](https://github.com/dev-carvalho/docker/tree/main/containers/postgres.md)
-- [x] [Mysql Server](https://github.com/dev-carvalho/docker/tree/main/containers/mysql.md)
+- [x] [PostgreSQL Server](https://github.com/dev-carvalho/docker/tree/main/containers/postgres.md)
+- [x] [MySQL Server](https://github.com/dev-carvalho/docker/tree/main/containers/mysql.md)
