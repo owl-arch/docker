@@ -25,6 +25,6 @@
 - [x] [MySQL Server](https://github.com/dev-carvalho/docker/tree/main/containers/mysql.md)
 
 #### 3. docker-compose.yaml
-- [ ] [PostgreSQL](https://github.com/dev-carvalho/docker/blob/main/containers/postgres.yaml)
-- [x] [Wordpress](https://github.com/dev-carvalho/docker/blob/main/containers/wordpress.yaml)
+- [ ] [PostgreSQL + pgAdmin](https://github.com/dev-carvalho/docker/blob/main/containers/postgres.yaml)
+- [x] [Wordpress + MySQL](https://github.com/dev-carvalho/docker/blob/main/containers/wordpress.yaml)
 
