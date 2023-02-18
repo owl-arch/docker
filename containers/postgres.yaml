@@ -5,6 +5,9 @@ services:
   postgres:
     image: postgres
     container_name: postgres
+    # automatically restarts the container - Docker daemon on restart or
+    # the container itself is manually restarted
+    restart: always
     environment:
       POSTGRES_PASSWORD: "root"
       POSTGRES_USER: postgres
@@ -19,11 +22,14 @@ services:
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin
+    # automatically restarts the container - Docker daemon on restart or
+    # the container itself is manually restarted
+    restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: "marcos.antonio.carvalho@gmail.com"
       PGADMIN_DEFAULT_PASSWORD: "master"
     ports:
-      - "8000:80"
+      - "54321:80"
     volumes:
       - /root/docker/volumes/pgadmin:/var/lib/pgadmin
     depends_on:
@@ -32,6 +38,5 @@ services:
       - db-network
 
 networks:
-
   db-network:
     driver: bridge
