@@ -26,4 +26,4 @@
 
 #### 3. docker-compose.yaml
 - [x] [Wordpress](https://github.com/dev-carvalho/docker/blob/main/containers/wordpress.yaml)
-- [ ] [PostgreSQL](https://github.com/dev-carvalho/docker/tree/main/containers)
+- [ ] [PostgreSQL](https://github.com/dev-carvalho/docker/blob/main/containers/postgres.yaml)
