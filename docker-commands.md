@@ -1,3 +1,8 @@
+### Acessar o bash do container
+```bash
+ docker exec -it <container> /bin/bash
+```
+
 ## Lista de comandos do Docker e sua utilidade
 
 Comando        | Finalidade      
