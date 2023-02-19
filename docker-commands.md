@@ -1,7 +1,13 @@
-### Acessar o bash do container
+#### Acessar o bash do container
 ```bash
- docker exec -it <container> /bin/bash
+docker exec -it <container> /bin/bash
 ```
+#### Acessar como root
+```bash
+docker exec -u 0 <container> <command>
+```
+
+<br><br>
 
 ## Lista de comandos do Docker e sua utilidade
 
