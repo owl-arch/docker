@@ -7,6 +7,16 @@ docker exec -it <container> /bin/bash
 docker exec -u 0 <container> <command>
 ```
 
+#### Limpando todas as imagens, contêineres, volumes e redes não utilizados ou pendentes
+```bash
+# Limpar imagens, contêineres, volumes e redes que estejam pendentes 
+docker system prune
+
+# Limpar imagens não utilizadas, contêineres interrompidos, volumes e redes 
+docker system prune -a
+```
+
+
 <br><br>
 
 ## Lista de comandos do Docker e sua utilidade
