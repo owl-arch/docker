@@ -1,4 +1,4 @@
-#### Acessar o bash do container
+#### Acessar o bash do container em modo iterativo
 ```bash
 docker exec -it <container> /bin/bash
 ```
