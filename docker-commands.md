@@ -118,9 +118,15 @@ docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 docker rm $(docker ps -qa -f status=exited)
 ```
 
-#### remove all images
+#### remover todas as imagens
 ```bash
-docker rmi -f $(docker images | awk '{print $3, $8}')
+docker image rm -f $(docker image ls -aq)
+docker rmi -f $(docker image ls -aq))
+```
+
+#### remover todos os Volumes
+```bash
+docker volume rm $(docker volume ls -q)
 ```
 
 #### inspect an image
