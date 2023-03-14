@@ -15,16 +15,11 @@
 #### 1. Instalação
 - [x] [Docker install](https://github.com/dev-carvalho/docker/blob/main/docker-install.md)
 - [x] [Docker commands](https://github.com/dev-carvalho/docker/blob/main/docker-commands.md)
-- [ ] [Kubernetes Install](https://github.com/dev-carvalho/docker/blob/main/containers/k8s.md)
-- [ ] [Kind Install](https://github.com/dev-carvalho/docker/blob/main/containers/kind.md)
-
 
 #### 2. Containers
 - [ ] [NGINX Server](https://github.com/dev-carvalho/docker/tree/main/containers/nginx.md)
 - [x] [PostgreSQL Server](https://github.com/dev-carvalho/docker/tree/main/containers/postgres.md)
 - [x] [MySQL Server](https://github.com/dev-carvalho/docker/tree/main/containers/mysql.md)
-
-
 
 | Command                       | Description                                                                              |
 | :---------------------------- | :--------------------------------------------------------------------------------------- |
